@@ -56,6 +56,22 @@ bot.on('voice', async (ctx) => {
     await ctx.reply("Nice! I downloaded your voice message. Send a command to indicate how can I process it. (ex.: /overdriveguitar) or add more audio data.");
 });
 
+bot.command('help', (ctx) => {
+    const helpMessage =
+        'Para começar, use o comando /start. \n\n' +
+        '/overdriveguitar - Aplica efeito de overdrive na guitarra.\n' +
+        '/isolatebass - Isola o som do baixo.\n' +
+        '/isolateguitar - Isola o som da guitarra.\n' +
+        '/reverseguitar - Inverte o áudio da guitarra.\n' +
+        '/reverbguitar - Aplica reverb na guitarra.\n' +
+        '/aimastering - Aplica masterização usando IA.\n' +
+        '/muteguitar - Remove o som da guitarra.\n' +
+        '/halfstepdown - Reduz a afinação em meio tom.\n' +
+        '/halfstepup - Aumenta a afinação em meio tom.\n' +
+        '/mutevocals - Remove o som dos vocais.\n\n';
+    ctx.reply(helpMessage);
+});
+
 bot.command('overdriveguitar', async (ctx) => {
     try {
         const files = readdirSync(inputFolderPath);
