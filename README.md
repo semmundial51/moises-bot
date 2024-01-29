@@ -1,43 +1,50 @@
 # Moises Bot
 
-Este é um bot que utiliza a API do Moises para processamento de áudio.
+This is a bot that utilizes the Moises API for audio processing.
 
-## Configuração
+## Configuration
 
-Antes de executar o bot, é necessário configurar um arquivo `.env` com duas informações essenciais:
+Before running the bot, it is necessary to set up a `.env` file with two essential pieces of information:
 
-1. `BOT_KEY`: Chave do bot.
-2. `MOISES_KEY`: Chave da API do Moises.
+1. `BOT_KEY`: Bot key.
+2. `MOISES_KEY`: Moises API key.
 
-Além disso, é importante adicionar o bot a um grupo ou canal para que ele possa operar corretamente.
+Additionally, it's important to add the bot to a group or channel to ensure it operates correctly.
 
-## Execução
+## Execution
 
-Após configurar o arquivo `.env` e adicionar o bot ao seu grupo ou canal, siga estes passos:
 
-1. Clone este repositório para o seu ambiente local.
-2. Abra o terminal na pasta do projeto.
-3. Execute o seguinte comando para instalar as dependências:
+After configuring the `.env` file and adding the bot to your group or channel, follow these steps:
+
+1. Clone this repository to your local environment.
+2. Open the terminal in the project folder.
+3. Execute the following command to install dependencies:
+  ```
+   npm install 
    ```
-   npm install
-   ```
-4. Em seguida, inicie o bot com o seguinte comando:
-   ```
+4. Download [ffmpeg](https://ffmpeg.org/).
+
+5. Next, start the bot with the following command:
+  ```
    nodemon
    ```
 
-## Comandos Disponíveis
+## Available Commands
 
-Atualmente, o bot suporta os seguintes comandos:
+Currently, the bot supports the following commands:
 
-- `/start`: É necessário rodá-lo antes de usar os demais comandos.
-- `/overdriveguitar`: Aplica efeito de overdrive na guitarra.
-- `/isolatebass`: Isola o som do baixo.
-- `/isolateguitar`: Isola o som da guitarra.
-- `/reverseguitar`: Inverte o áudio da guitarra.
-- `/reverbguitar`: Aplica reverb na guitarra.
-- `/aimastering`: Aplica masterização usando IA.
-- `/muteguitar`: Remove o som da guitarra.
-- `/halfstepdown`: Reduz a afinação em meio tom.
-- `/halfstepup`: Aumenta a afinação em meio tom.
-- `/mutevocals`: Remove o som dos vocais.
+- `/start`: This command needs to be run before using other commands.
+- `/overdriveguitar`: Applies overdrive effect to the guitar.
+- `/isolatebass`: Isolates the sound of the bass.
+- `/isolateguitar`: Isolates the sound of the guitar.
+- `/reverseguitar`: Reverses the audio of the guitar.
+- `/reverbguitar`: Applies reverb to the guitar.
+- `/aimastering`: Applies AI-based mastering.
+- `/muteguitar`: Removes the sound of the guitar.
+- `/halfstepdown`: Decreases the tuning by half step.
+- `/halfstepup`: Increases the tuning by half step.
+- `/mutevocals`: Removes the sound of vocals.
+
+## Latest Telegram update
+
+After the latest Telegram update, the bot can only receive audio files when accessed through the mobile application.
