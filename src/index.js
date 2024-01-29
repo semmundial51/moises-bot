@@ -43,7 +43,7 @@ bot.on('audio', async (ctx) => {
 
     await downloadAudioFile(ctx, ctx.message.audio.file_id, inputFilePath);
     
-    await ctx.reply("Nice! I downloaded your audio file. Send a command to indicate how can I process it. (ex.: /overdriveguitar) or add more audio data.");
+    await ctx.reply("Nice! I downloaded your audio file. Send a command to indicate how can I process it. (ex.: /overdriveguitar).");
 }); 
 
 bot.on('voice', async (ctx) => {
@@ -53,22 +53,22 @@ bot.on('voice', async (ctx) => {
 
     await downloadAudioFile(ctx, ctx.message.voice.file_id, inputFilePath);
 
-    await ctx.reply("Nice! I downloaded your voice message. Send a command to indicate how can I process it. (ex.: /overdriveguitar) or add more audio data.");
+    await ctx.reply("Nice! I downloaded your voice message. Send a command to indicate how can I process it. (ex.: /overdriveguitar).");
 });
 
 bot.command('help', (ctx) => {
     const helpMessage =
-        'Para começar, use o comando /start. \n\n' +
-        '/overdriveguitar - Aplica efeito de overdrive na guitarra.\n' +
-        '/isolatebass - Isola o som do baixo.\n' +
-        '/isolateguitar - Isola o som da guitarra.\n' +
-        '/reverseguitar - Inverte o áudio da guitarra.\n' +
-        '/reverbguitar - Aplica reverb na guitarra.\n' +
-        '/aimastering - Aplica masterização usando IA.\n' +
-        '/muteguitar - Remove o som da guitarra.\n' +
-        '/halfstepdown - Reduz a afinação em meio tom.\n' +
-        '/halfstepup - Aumenta a afinação em meio tom.\n' +
-        '/mutevocals - Remove o som dos vocais.\n\n';
+        'To get started, use the /start command. \n\n' +
+        '/overdriveguitar - Apply overdrive effect to the guitar.\n' +
+        '/isolatebass - Isolate the sound of the bass.\n' +
+        '/isolateguitar - Isolate the sound of the guitar.\n' +
+        '/reverseguitar - Reverse the audio of the guitar.\n' +
+        '/reverbguitar - Apply reverb to the guitar.\n' +
+        '/aimastering - Apply AI-based mastering.\n' +
+        '/muteguitar - Remove the sound of the guitar.\n' +
+        '/halfstepdown - Decrease the tuning by half step.\n' +
+        '/halfstepup - Increase the tuning by half step.\n' +
+        '/mutevocals - Remove the sound of vocals.\n\n';
     ctx.reply(helpMessage);
 });
 
